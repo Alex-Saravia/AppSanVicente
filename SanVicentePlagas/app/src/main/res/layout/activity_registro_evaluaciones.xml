@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingVertical="15dp"
+    android:paddingHorizontal="20dp"
+    tools:context=".RegistroEvaluaciones">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="30dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NÚMERO DE PLANTA: "
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    android:layout_marginVertical="10pt"/>
+                <TextView
+                    android:id="@+id/tvwnumeroPlanta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_weight="2"
+                    android:textColor="@color/black"
+                    android:background="@drawable/cajatexto"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SELECCIONAR CULTIVO : "
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="10pt"/>
+            <Spinner
+                android:id="@+id/spnCultivo"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="5pt"
+                android:textColor="@color/black"
+                android:background="@drawable/cajatexto"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SELECCIONAR VARIEDAD : "
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="10pt"/>
+            <Spinner
+                android:id="@+id/spnVariedad"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="5pt"
+                android:textColor="@color/black"
+                android:background="@drawable/cajatexto"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SELECCIONAR FENOLOGÍA: "
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="10pt"/>
+            <Spinner
+                android:id="@+id/spnFenologia"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="5pt"
+                android:textColor="@color/black"
+                android:background="@drawable/cajatexto"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SELECCIONAR PLAGA: "
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="10pt"/>
+            <Spinner
+                android:id="@+id/spnPlaga"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="5pt"
+                android:textColor="@color/black"
+                android:background="@drawable/cajatexto"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LATITUD :    "
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:layout_marginVertical="10pt"/>
+                <TextView
+                    android:id="@+id/edtLatitud"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="5"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/cajatexto"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LONGITUD : "
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:layout_marginVertical="10pt"/>
+                <TextView
+                    android:id="@+id/edtLongitud"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="5"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/cajatexto"/>
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/imgEvaluacion"
+                android:layout_width="wrap_content"
+                android:minWidth="70pt"
+                android:layout_gravity="center"
+                android:background="@drawable/cajatexto"
+                android:layout_height="70pt"/>
+            <Button
+                android:id="@+id/btnImagenEvaluacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SUBIR IMAGEN"
+                android:onClick="insert_Img"
+                android:textSize="17sp"
+                android:layout_marginTop="10pt"
+                android:background="@drawable/bordeboton"/>
+            <Button
+                android:id="@+id/btnSiguienteE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SIGUIENTE PLANTA"
+                android:textSize="17sp"
+                android:layout_marginTop="10pt"
+                android:background="@drawable/bordeboton"/>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

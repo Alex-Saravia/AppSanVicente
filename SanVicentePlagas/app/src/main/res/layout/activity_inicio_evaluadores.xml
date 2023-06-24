@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".InicioEvaluadores">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="30dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp">
+                <ImageButton
+                    android:id="@+id/imgRegistroEvaluaciones2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/evaluaciones"
+                    android:layout_gravity="left|top"
+                    android:adjustViewBounds="true"
+                    android:background="@color/white"
+                    android:padding="2pt"
+                    android:layout_weight="3"
+                    android:scaleType="centerCrop"
+                    android:layout_marginLeft="30dp"
+                    android:contentDescription="Imagen para modulo de evaluación"
+                    android:layout_marginRight="15dp"/>
+
+                <ImageButton
+                    android:id="@+id/imgRegistroTratamiento2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/tratamiento"
+                    android:layout_gravity="right|top"
+                    android:adjustViewBounds="true"
+                    android:background="@color/white"
+                    android:padding="2pt"
+                    android:layout_weight="3"
+                    android:scaleType="centerCrop"
+                    android:layout_marginRight="30dp"
+                    android:contentDescription="Imagen para modulo de registros"
+                    android:layout_marginLeft="15dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp">
+                <ImageButton
+                    android:id="@+id/imgReporteEvaluaciones2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/reporteevaluaciones"
+                    android:layout_gravity="left|top"
+                    android:adjustViewBounds="true"
+                    android:background="@color/white"
+                    android:padding="2pt"
+                    android:layout_weight="3"
+                    android:scaleType="centerCrop"
+                    android:layout_marginLeft="30dp"
+                    android:contentDescription="Imagen para modulo de evaluación"
+                    android:layout_marginRight="15dp"/>
+
+                <ImageButton
+                    android:id="@+id/imgReporteTratamientos2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/reportetratamientos"
+                    android:layout_gravity="right|top"
+                    android:adjustViewBounds="true"
+                    android:background="@color/white"
+                    android:padding="2pt"
+                    android:layout_weight="3"
+                    android:scaleType="centerCrop"
+                    android:layout_marginRight="30dp"
+                    android:contentDescription="Imagen para modulo de registros"
+                    android:layout_marginLeft="15dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp">
+                <ImageButton
+                    android:id="@+id/imgRegistroEvaluadores2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/evaluadores"
+                    android:layout_gravity="left|top"
+                    android:adjustViewBounds="true"
+                    android:background="@color/white"
+                    android:padding="2pt"
+                    android:layout_weight="3"
+                    android:scaleType="centerCrop"
+                    android:layout_marginLeft="30dp"
+                    android:contentDescription="Imagen para modulo de evaluación"
+                    android:layout_marginRight="15dp"/>
+
+                <ImageButton
+                    android:id="@+id/imgRegistrosCultivo2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cultivo"
+                    android:layout_gravity="right|top"
+                    android:adjustViewBounds="true"
+                    android:background="@color/white"
+                    android:padding="2pt"
+                    android:layout_weight="3"
+                    android:scaleType="centerCrop"
+                    android:layout_marginRight="30dp"
+                    android:contentDescription="Imagen para modulo de registros"
+                    android:layout_marginLeft="15dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp">
+                <ImageButton
+                    android:id="@+id/imgRegistroVariedades2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/variedades"
+                    android:layout_gravity="left|top"
+                    android:adjustViewBounds="true"
+                    android:background="@color/white"
+                    android:padding="2pt"
+                    android:layout_weight="3"
+                    android:scaleType="centerCrop"
+                    android:layout_marginLeft="30dp"
+                    android:contentDescription="Imagen para modulo de evaluación"
+                    android:layout_marginRight="15dp"/>
+
+                <ImageButton
+                    android:id="@+id/imgRegistrosPlaga2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/plagas"
+                    android:layout_gravity="right|top"
+                    android:adjustViewBounds="true"
+                    android:background="@color/white"
+                    android:padding="2pt"
+                    android:layout_weight="3"
+                    android:scaleType="centerCrop"
+                    android:layout_marginRight="30dp"
+                    android:contentDescription="Imagen para modulo de registros"
+                    android:layout_marginLeft="15dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp">
+                <ImageButton
+                    android:id="@+id/imgRegistroFenologia2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/fenologia"
+                    android:layout_gravity="left|top"
+                    android:adjustViewBounds="true"
+                    android:background="@color/white"
+                    android:padding="2pt"
+                    android:layout_weight="3"
+                    android:scaleType="centerCrop"
+                    android:layout_marginLeft="30dp"
+                    android:contentDescription="Imagen para modulo de evaluación"
+                    android:layout_marginRight="15dp"/>
+
+                <ImageButton
+                    android:id="@+id/imgRutasEvaluaciones2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/rutas"
+                    android:layout_gravity="right|top"
+                    android:adjustViewBounds="true"
+                    android:background="@color/white"
+                    android:padding="2pt"
+                    android:layout_weight="3"
+                    android:scaleType="centerCrop"
+                    android:layout_marginRight="30dp"
+                    android:contentDescription="Imagen para modulo de registros"
+                    android:layout_marginLeft="15dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
