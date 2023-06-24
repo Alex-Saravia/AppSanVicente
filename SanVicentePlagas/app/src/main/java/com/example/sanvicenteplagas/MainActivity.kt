@@ -6,17 +6,15 @@ import android.view.View
 import com.google.firebase.analytics.FirebaseAnalytics
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.example.sanvicenteplagas.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.activity_login.btnIngresar
-import kotlinx.android.synthetic.main.activity_login.btnRegistrar
-import kotlinx.android.synthetic.main.activity_login.edtPassword
-import kotlinx.android.synthetic.main.activity_login.edtUsuario
 
 class MainActivity : AppCompatActivity() {
-
+    private lateinit var binding: ActivityLoginBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         val analytics = FirebaseAnalytics.getInstance(this)
         val bundle = Bundle()
         bundle.putString("message","Integración completa de Firebase")
@@ -27,10 +25,10 @@ class MainActivity : AppCompatActivity() {
     }
     private fun setup() {
         title = "Autentificación"
-        btnRegistrar.setOnClickListener {
-            if(edtUsuario.text.isNotEmpty() && edtPassword.text.isNotEmpty()){
+        binding.btnRegistrar.setOnClickListener {
+            if(binding.edtUsuario.text.isNotEmpty() && binding.edtPassword.text.isNotEmpty()){
                 FirebaseAuth.getInstance()
-                    .createUserWithEmailAndPassword(edtUsuario.text.toString(), edtPassword.text.toString())
+                    .createUserWithEmailAndPassword(binding.edtUsuario.text.toString(), binding.edtPassword.text.toString())
                     .addOnCompleteListener {
 
                         if(it.isSuccessful){
@@ -41,10 +39,10 @@ class MainActivity : AppCompatActivity() {
                     }
             }
         }
-        btnIngresar.setOnClickListener {
-            if(edtUsuario.text.isNotEmpty() && edtPassword.text.isNotEmpty()){
+        binding.btnIngresar.setOnClickListener {
+            if(binding.edtUsuario.text.isNotEmpty() && binding.edtPassword.text.isNotEmpty()){
                 FirebaseAuth.getInstance()
-                    .signInWithEmailAndPassword(edtUsuario.text.toString(), edtPassword.text.toString()).addOnCompleteListener {
+                    .signInWithEmailAndPassword(binding.edtUsuario.text.toString(), binding.edtPassword.text.toString()).addOnCompleteListener {
 
                         if(it.isSuccessful){
                             menuInicio()

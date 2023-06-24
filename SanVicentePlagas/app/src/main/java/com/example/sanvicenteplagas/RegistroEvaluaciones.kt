@@ -23,17 +23,15 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.storage.StorageReference
 
 class RegistroEvaluaciones : AppCompatActivity() {
-
+    //Relacion con el activity
     private lateinit var binding: ActivityRegistroEvaluacionesBinding
-
-    private lateinit var firebaseRef : DatabaseReference
-    private lateinit var storageRef : StorageReference
-
+    //Variables para subir imagenes
+    private lateinit var firebaseRef: DatabaseReference
+    private lateinit var storageRef: StorageReference
     private var uri: Uri? = null
-
+    //Variables para obtener Ubicación
     private val CODIGO_PERMISO_SEGUNDO_PLANO = 100
     private var isPermisos = false
-
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     private lateinit var locationCallback: LocationCallback
 
@@ -45,9 +43,22 @@ class RegistroEvaluaciones : AppCompatActivity() {
         verificarPermisos()
     }
 
+    //Codigo para la obtencion de imagenes
+    fun insert_data(view : View){
+        //val idEvaluaciones : String? = null,
+        val numeroPlanta = binding.tvwnumeroPlanta.text.toString()
+        val cultivo = binding.spnCultivo.selectedItem.toString()
+        val variedad = binding.spnVariedad.toString()
+        val fenologia = binding.spnFenologia.toString()
+        val plaga = binding.tvwnumeroPlanta.text.toString()
+        val latitud = binding.tvwnumeroPlanta.text.toString()
+        val longitud = binding.tvwnumeroPlanta.text.toString()
+        val imgURL = binding.tvwnumeroPlanta.text.toString()
+    }
+    fun insertarImagen(view: View){
 
-
-    //Proceso para obtener ubicación
+    }
+    //Codigo para obtener ubicación
 
     private fun verificarPermisos() {
         val permisos = arrayListOf(
@@ -121,8 +132,8 @@ class RegistroEvaluaciones : AppCompatActivity() {
     }
 
     private fun imprimirUbicacion(ubicacion: Location) {
-        binding.edtLatitud.text = "${ubicacion.latitude}"
-        binding.edtLongitud.text = "${ubicacion.longitude}"
+        binding.tvwLatitud.text = "${ubicacion.latitude}"
+        binding.tvwLongitud.text = "${ubicacion.longitude}"
         Log.d("GPS", "LAT: ${ubicacion.latitude} - LON: ${ubicacion.longitude}")
     }
 

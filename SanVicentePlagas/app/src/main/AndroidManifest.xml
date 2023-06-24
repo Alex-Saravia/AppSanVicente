@@ -42,6 +42,10 @@
             android:exported="false"
             android:theme="@style/Theme.AppCompat.NoActionBar"/>
         <activity
+            android:name=".RegVariedad"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity
             android:name=".RegEvaluadores"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.NoActionBar"/>

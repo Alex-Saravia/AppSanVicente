@@ -3,51 +3,45 @@ package com.example.sanvicenteplagas
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_inicio.imgRegistroEvaluaciones
-import kotlinx.android.synthetic.main.activity_inicio.imgRegistroEvaluadores
-import kotlinx.android.synthetic.main.activity_inicio.imgRegistroFenologia
-import kotlinx.android.synthetic.main.activity_inicio.imgRegistroTratamiento
-import kotlinx.android.synthetic.main.activity_inicio.imgRegistroVariedades
-import kotlinx.android.synthetic.main.activity_inicio.imgRegistrosCultivo
-import kotlinx.android.synthetic.main.activity_inicio.imgRegistrosPlaga
-import kotlinx.android.synthetic.main.activity_inicio.imgReporteEvaluaciones
-import kotlinx.android.synthetic.main.activity_inicio.imgReporteTratamientos
-import kotlinx.android.synthetic.main.activity_inicio.imgRutasEvaluaciones
+import com.example.sanvicenteplagas.databinding.ActivityInicioBinding
+
 
 
 class InicioActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityInicioBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_inicio)
+        binding = ActivityInicioBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         //Envio diferentes items
-        imgRegistroEvaluaciones.setOnClickListener {
+        binding.imgRegistroEvaluaciones.setOnClickListener {
             RegistroEvaluaciones()
         }
-        imgRegistroTratamiento.setOnClickListener {
+        binding.imgRegistroTratamiento.setOnClickListener {
             RegistroTratamientos()
         }
-        imgRegistroEvaluadores.setOnClickListener {
+        binding.imgRegistroEvaluadores.setOnClickListener {
             Evaluadores()
         }
-        imgRegistrosCultivo.setOnClickListener {
+        binding.imgRegistrosCultivo.setOnClickListener {
             Cultivo()
         }
-        imgRegistroVariedades.setOnClickListener {
+        binding.imgRegistroVariedades.setOnClickListener {
             Variedad()
         }
-        imgRegistroFenologia.setOnClickListener {
+        binding.imgRegistroFenologia.setOnClickListener {
             Fenolofia()
         }
-        imgRegistrosPlaga.setOnClickListener {
+        binding.imgRegistrosPlaga.setOnClickListener {
             Plaga()
         }
-        imgRutasEvaluaciones.setOnClickListener {
+        binding.imgRutasEvaluaciones.setOnClickListener {
             Rutas()
         }
-        imgReporteEvaluaciones.setOnClickListener {
+        binding.imgReporteEvaluaciones.setOnClickListener {
             ReporteEvaluaciones()
         }
-        imgReporteTratamientos.setOnClickListener {
+        binding.imgReporteTratamientos.setOnClickListener {
             ReporteTratamientos()
         }
     }
